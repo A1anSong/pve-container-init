@@ -32,6 +32,8 @@ echo "LANG=zh_CN.UTF-8" > /etc/default/locale
 update-locale LANG=zh_CN.UTF-8
 
 # 修改 /etc/ssh/sshd_config 允许 root 远程登录
+sed -i 's/^#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sed -i 's/^PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 sed -i 's/^#PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config
 sed -i 's/^PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config
 
