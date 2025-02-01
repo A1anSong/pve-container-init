@@ -8,3 +8,10 @@
 
 ```bash
 bash -c "$(wget -qO- https://raw.githubusercontent.com/A1anSong/pve-container-init/main/init.sh)"
+```
+
+或者使用 curl:
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/A1anSong/pve-container-init/main/init.sh)"
+```
