@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -e
 
 # 更新软件包列表
@@ -40,4 +41,4 @@ echo "1314\n1314" | smbpasswd -a a1an
 systemctl restart smbd
 systemctl restart nmbd
 
-echo "Samba server initialization complete. Share path: /srv/samba/public" # Samba 服务器初始化完成。共享路径: /srv/samba/public
+echo "Samba 服务器初始化完成。共享路径: /srv/samba/public"
