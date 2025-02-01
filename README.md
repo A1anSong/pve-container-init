@@ -15,3 +15,31 @@ bash -c "$(wget -qO- https://raw.githubusercontent.com/A1anSong/pve-container-in
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/A1anSong/pve-container-init/main/init.sh)"
 ```
+
+## Samba 服务器初始化
+
+使用以下命令初始化 Samba 服务器：
+
+```bash
+bash -c "$(wget -qO- https://raw.githubusercontent.com/A1anSong/pve-container-init/main/samba-server-init.sh)"
+```
+
+或者使用 curl:
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/A1anSong/pve-container-init/main/samba-server-init.sh)"
+```
+
+## Samba 客户端初始化
+
+使用以下命令初始化 Samba 客户端：
+
+```bash
+bash -c "$(wget -qO- https://raw.githubusercontent.com/A1anSong/pve-container-init/main/samba-client-init.sh)"
+```
+
+或者使用 curl:
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/A1anSong/pve-container-init/main/samba-client-init.sh)"
+```
