@@ -33,11 +33,19 @@ update-locale LANG=zh_CN.UTF-8
 
 # 修改 /etc/ssh/sshd_config 允许 root 远程登录
 sed -i 's/^#PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config
+sed -i 's/^PermitRootLogin no/PermitRootLogin yes/' /etc/ssh/sshd_config
 
-# 重启 SSH 服务
-systemctl restart ssh
+# 提示用户确认是否重启
+read -r -p "Do you want to reboot the container now? (y/N): " confirm
+if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
+  echo "Rebooting the system..."
+  reboot
+else
+  echo "Rebooting SSH service..."
+  systemctl restart ssh
+fi
 
 # 修改 root 用户密码 (示例，请替换为你的密码)
-# echo "root:MyNewPassword123!" | chpasswd
+echo "root:1314" | chpasswd
 
 echo "Container initialization complete."
