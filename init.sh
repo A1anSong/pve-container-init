@@ -51,6 +51,6 @@ else
 fi
 
 # 修改 root 用户密码 (示例，请替换为你的密码)
-echo "root:1314" | chpasswd
+#echo "root:1314" | chpasswd
 
 echo "Container initialization complete."
