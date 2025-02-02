@@ -34,8 +34,8 @@ chmod 0770 /srv/samba/public
 
 # 创建 Samba 用户 (请根据你的需求修改用户名和密码)
 adduser a1an
-echo "1314" | passwd --stdin a1an
-echo "1314\n1314" | smbpasswd -a a1an
+#echo "1314" | passwd --stdin a1an
+#echo "1314\n1314" | smbpasswd -a a1an
 
 # 重启 Samba 服务
 systemctl restart smbd
