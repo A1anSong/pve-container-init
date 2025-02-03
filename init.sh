@@ -16,9 +16,6 @@ apt upgrade -y
 # 安装常用工具
 apt install -y wget curl vim net-tools iputils-ping
 
-# 安装 avahi-daemon
-apt install -y avahi-daemon
-
 # 移除不再需要的依赖包和清理缓存
 apt autoremove -y
 apt autoclean -y
