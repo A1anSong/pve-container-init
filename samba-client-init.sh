@@ -17,10 +17,10 @@ printf "username=a1an\npassword=1314\n" | sudo tee /root/.smbcredentials
 sudo chmod 600 /root/.smbcredentials
 
 # 创建挂载点目录
-sudo mkdir -p /mnt/PublicData
+sudo mkdir -p /mnt/Public
 
 # 添加 fstab 条目，实现开机自动挂载
-FSTAB_LINE="//192.168.2.3/public /mnt/PublicData cifs credentials=/root/.smbcredentials,uid=1000,gid=1000,_netdev,x-systemd.requires=network-online.target,x-systemd.after=network-online.target 0 0"
+FSTAB_LINE="//192.168.2.3/public /mnt/Public cifs credentials=/root/.smbcredentials,uid=1000,gid=1000,_netdev,x-systemd.requires=network-online.target,x-systemd.after=network-online.target 0 0"
 
 # 检查是否已经存在相同的 fstab 条目
 if ! grep -qF "$FSTAB_LINE" /etc/fstab; then
